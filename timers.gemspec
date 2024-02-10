@@ -1,10 +1,8 @@
 # frozen_string_literal: true
 
-require_relative "lib/timers/version"
-
 Gem::Specification.new do |spec|
 	spec.name = "timers"
-	spec.version = Timers::VERSION
+	spec.version = "4.3.5"
 	
 	spec.summary = "Pure Ruby one-shot and periodic timers."
 	spec.authors = ["Tony Arcieri", "Samuel Williams", "Donovan Keme", "Wander Hillen", "Utenmiki", "Jeremy Hinegardner", "Sean Gregory", "Chuck Remes", "Olle Jonsson", "Ron Evans", "Tommy Ong Gia Phu", "Larry Lv", "Lin Jen-Shin", "Ryunosuke SATO", "Atul Bhosale", "Bruno Enten", "Dimitrij Denissenko", "Feram", "Jesse Cooke", "Klaus Trainer", "Lavir the Whiolet", "Mike Bourgeous", "Nicholas Evans", "Peter Goldstein", "Ryan LeCompte", "Tim Smith", "Vít Ondruch", "Will Jessop", "Yoshiki Takagi"]
@@ -15,7 +13,8 @@ Gem::Specification.new do |spec|
 	
 	spec.homepage = "https://github.com/socketry/timers"
 	
-	spec.files = Dir.glob(['{lib}/**/*', '*.md'], File::FNM_DOTMATCH, base: __dir__)
+	spec.files        = Dir['README.md', 'lib/**/*']
+  spec.require_path = 'lib'
 	
 	spec.add_development_dependency "bake-test", "~> 0.1"
 	spec.add_development_dependency "bake-test-external", "~> 0.2"
